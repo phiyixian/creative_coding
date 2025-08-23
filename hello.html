@@ -4,7 +4,74 @@
 
         </canvas>
         <script>
-            
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d');
+
+        context.fillStyle = 'red';
+        // context.fillRect(100, 100, 400, 400);
+
+        // context.lineWidth = 4;
+        // context.beginPath();
+        // context.rect(100, 100, 400, 400);
+        // context.stroke();
+
+        // context.beginPath();
+        // context.arc(300, 300, 100, 0, Math.PI * 2);
+        // context.stroke();
+
+        const width = 60;
+        const height = 60;
+        const gap = 20;
+        let x, y;
+
+        for (let i = 0; i < 5; i ++){
+            for (let j = 0; j < 5; j++){
+                x = 100 + (width + gap) * i;
+                y = 100 + (width + gap) * j;
+
+                context.beginPath();
+                context.rect(x, y, width, height);
+                context.stroke();
+
+                if (Math.random() > 0.5) {
+                    context.beginPath();
+                    context.rect(x + 8, y + 8, width - 16, height - 16);
+                    context.stroke();
+                }
+                
+            }  
+        }
+
+        // Basics of JavaScript
+        let multiply = (a, b) => {
+            return a * b;
+        }
+        console.log(multiply(1, 2));
+
+        let years = [2000, 2001, 2002, 2003];
+        for (let i = 0; i < years.length; i++) {
+            console.log(years[i]);
+        }
+
+        for (let i = 0; i < 10; i++) {
+            years.push(2004 + i);
+        }
+        console.log(years);
+
+        const gravity = 9.81;
+        let velocity = 0.0;
+
+        years.forEach(item => {
+            console.log(item);
+        })
+
+        let artists = ["Picasso", "Van Gogh", "Da Vinci"];
+        function listArtists() {
+            artists.forEach(artist => {
+                console.log(artist);
+            });
+        }
+        listArtists();
         </script>
     </body>
 </html>
