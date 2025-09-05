@@ -4,6 +4,9 @@ const random = require('canvas-sketch-util/random');
 
 const settings = {
   dimensions: [1080, 1080],
+  // animate: true, // allow animation
+  // fps: 24,       // optional: fix fps
+  // duration: 6    // optional: 6s looping animation
 };
 
 // const degToRad = (degree) => {
@@ -85,5 +88,7 @@ const sketch = () => {
     // context.fill();
   };
 };
+
+
 
 canvasSketch(sketch, settings);
